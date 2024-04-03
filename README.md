@@ -7,8 +7,9 @@
 - 'content' is the second ARG (optionnal) and let's you write some more inside the body of the page
 
 ## Next
-[ ] integrate with Alfred
+[x] integrate with Alfred
 [ ] create a local backup
+[ ] review former scripts and experiments to create notes, logs, etc.
 
 ## To install and use this
 ### CLI
@@ -35,3 +36,6 @@ As I'm developing this, i'm still working with ~~wget~~ curl.
 ### Running it
 - your bourne might not be the same as mine
 - zsh: edit ~/.zshrc to create an alias; export $PATH and chmod +x an.sh to make it executable
+
+### Alfred Workflow [WIP]
+use the configure workflow to insert where you've stored the script
