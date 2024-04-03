@@ -12,6 +12,10 @@
 
 ## Top install and use this
 
+### CLI
+
+	zsh an.sh 'title' 'content' 'tags'
+
 ### needs notion.env with the page_id and the secret
 see: https://www.notion.so/my-integrations
 The file should contain the following
