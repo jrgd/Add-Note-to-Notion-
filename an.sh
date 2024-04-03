@@ -1,5 +1,6 @@
 #!/bin/zsh
 
+# Set your variable
 source /Users/jrgd/dev/tools/Notion/secrets/notion.env
 
 # EXTRACT TITLE WITHOUT TAGS
@@ -36,9 +37,19 @@ BODY=$(jq -n --arg DATABASE_ID "$NOTION_DATABASE_ID" \
 # wget -q -O- --post-data $BODY $NOTION_URL --header "content-type: application/json" --header "Authorization: Bearer $NOTION_KEY" --header "Notion-Version: $NOTION_VERSION" --server-response 
 
 # CURL
-curl -X POST \
-     -H "Content-Type: application/json" \
-     -H "Authorization: Bearer $NOTION_KEY" \
-     -H "Notion-Version: $NOTION_VERSION" \
-     -d "$BODY" \
-     $NOTION_URL
+response=$( \
+	curl -s \
+		 -X POST \
+	     -H "Content-Type: application/json" \
+	     -H "Authorization: Bearer $NOTION_KEY" \
+	     -H "Notion-Version: $NOTION_VERSION" \
+	     -d "$BODY" \
+	     $NOTION_URL \
+)
+
+# DEV?
+if [[ "$ENVIRONMENT" == 'dev' ]]; then
+	echo "$response"
+else
+    # Variable 'environment' is not set to 'dev'. Response from server not printed.
+fi
