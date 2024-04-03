@@ -2,10 +2,15 @@
 
 
 ## Basics
-- Currently, the three ARGS are required title, content, tags
-- the tags are not split, so the string forms a single tag
+- Currently, there's only one ARG required: title
+- 'title' can contain #multiple #tags — they will be parsed out from the title and inserted as tag inside Notion
+- 'content' is the second ARG (optionnal) and let's you write some more inside the body of the page
 
-## Top install and use this
+## Next
+[ ] integrate with Alfred
+[ ] create a local backup
+
+## To install and use this
 ### CLI
 	zsh an.sh 'title' 'content'
 NB: 'title' can contain #tags, they will be parsed with the following assumption: #tag1 #tag2 #tag3 are three distinct tags; there is no space within a single tag.
