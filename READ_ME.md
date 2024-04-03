@@ -1,8 +1,8 @@
 # AN - Add Notes (to Notion)
 
 
-[ ] fix the tags
-[ ] accept a request without all the parameters
+[x] fix the tags
+[x] accept a request without all the parameters
 
 
 ## Basics
